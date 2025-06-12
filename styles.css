@@ -1,0 +1,253 @@
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #2c2f3a;
+  color: white;
+  font-family: gadugi, sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  max-width: 1400px;
+  margin: 0 auto 4rem auto;
+  padding: 2rem;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  background: linear-gradient(to right, 
+    #00FFEF,
+    #2c2f3a
+    );
+  z-index: 1;
+  text-align: right;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+
+.nav-link:hover {
+  color: #00FFEF;
+  transform: scale(1.1);
+}
+
+#github-logo {
+  height: 3rem;
+  width: 3rem;
+  vertical-align: middle;
+}
+
+#github-logo:hover {
+  transform: scale(1.1);
+  filter: invert(32%) sepia(91%) saturate(3876%) hue-rotate(140deg) brightness(100%) contrast(100%);
+}
+
+section {
+  scroll-margin-top: 8rem;
+}
+
+#welcome-section, #project-section, #contact-section {
+  margin: 6rem auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 2rem;
+  background-color: black;
+}
+
+#welcome-section {
+  max-width: 50rem;
+  padding: 3rem;
+}
+
+#project-section, #contact-section {
+  padding: 2rem 1rem;
+}
+
+#contact-section {
+  max-width: 30rem;
+  padding: 4rem;
+}
+
+#flower-of-life {
+  width: 90%;
+  max-width: 30rem;
+  height: auto;
+  border-radius: 50%;
+  animation: spin 60s infinite linear;
+}
+
+h1 {
+  font-size: 2.5rem;
+  letter-spacing: .5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  letter-spacing: .2rem;
+  margin: .5rem;
+  font-style: italic;
+}
+
+h3 {
+  font-size: 1.5rem;
+  letter-spacing: .2rem;
+  margin: 2rem;
+}
+
+.project-tile-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 2rem;
+}
+
+.project-tile, .project-tile-2 {
+  width: 200px;
+  height: auto;
+  border: 1px solid white;
+  border-radius: 1rem;
+  text-align: center;
+  justify-content: center;
+  padding: .7rem .7rem 0 .7rem;
+}
+
+.project-tile img, .project-tile-2 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: .5rem;
+}
+
+.project-tile:hover, .project-tile-2:hover {
+  transform: scale(1.05);
+}
+
+.tile-caption {
+  font-size: 1.2rem;
+  letter-spacing: .1rem;
+}
+
+#links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-button {
+  padding: 0.6rem 1.2rem;
+  margin: 0.5rem;
+  background-color: #00FFEF;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 1rem;
+  letter-spacing: .2rem;
+}
+
+.contact-button:hover {
+  background-color: #00cfc4;
+  transform: scale(1.05);
+}
+
+#contact-section p {
+  font-size: 1.2rem;
+  letter-spacing: .2rem;
+  padding-bottom: 1rem;
+  font-style: italic;
+}
+
+@keyframes spin {
+  0% {
+   transform: rotate(0deg);
+  }
+  100% {
+   transform: rotate(360deg);
+  }
+}
+
+/* @media 
+queries 
+below */
+
+@media (max-width: 600px) {
+  nav {
+  height: 3rem;
+  }
+
+  .nav-link {
+  font-size: 1rem;
+  margin: .5rem;
+  }
+
+  #github-logo {
+  height: 2rem;
+  width: 2rem;
+  }
+
+  h1 {
+  font-size: 1.5rem;
+  }
+
+  h2 {
+  font-size: 1rem;
+  }
+
+  h3 {
+  font-size: 1.2rem;
+  }
+
+  section {
+  scroll-margin-top: 6rem;
+  }
+
+  #welcome-section, #project-section, #contact-section {
+  margin-top: 4rem;
+  }
+
+  .project-tile-row {
+  gap: 1rem;
+  }
+
+  .project-tile, .project-tile-2 {
+  width: 100px;
+  border-radius: .7rem;
+  padding: .5rem;
+  }
+
+  .project-tile img, .project-tile-2 img {
+    border-radius: .3rem;
+  }
+
+  .tile-caption {
+  font-size: .5rem;
+}
+
+  #contact-section p {
+    font-size: 1rem;
+  }
